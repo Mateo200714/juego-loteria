@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotería Juego</title>
+    <link rel="stylesheet" href="stylos.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./servidor.js" type="module"></script>
+</head>
+
+<body>
+    <div id="div-barra-progreso-nivel">
+        <div id="div-interior-barra-progreso-nivel">
+            Level </br>1
+        </div>
+    </div>
+    <div class="div-fichas-totales">
+        <img draggable="false" class="img-dinero-total" alt="" src="./imgs/dinero.png">
+        <h4 id="text-dinero-total">0</h4>
+    </div>
+    <div id="div-dinero-sumar"></div>
+
+    <img draggable="false" class="bt-tienda-mostrar" src="./imgs/tienda.png" alt="" onclick="abrir_tienda()">
+    <div id="div-tienda">
+        <img draggable="false" class="img-volver-tienda" src="./imgs/cerrar_lista.png" alt="" onclick="cerrar_tienda()">
+        <div class="div-indice-tienda">
+            <input class="bt-opciones-indice-tienda" type="button" value="Bonus" onclick="abrir_tienda()">
+            <input class="bt-opciones-indice-tienda " type="button" value="Historial" onclick="abrir_historial()">
+        </div>
+        <div id="div-body-tienda-bonus" class="div-body-tienda"></div>
+        <div id="div-body-tienda-historial" class="div-body-tienda">
+            <!--<div class="text-historial-vacio">No tienes acciones guardadas</div>-->
+            <div class="tiempo-acciones-historial">
+                <div class="text-tiempo-acciones-historial">HOY <font class="dinero-total-accion dinero-total">($ 350)
+                    </font>
+                </div>
+                <div class="acciones-historal dinero-ganancias">· + 250 (+ 150 * 1.45)
+                    <font class="dinero-total-accion dinero-ganancias">($ 255)</font>
+                </div>
+                <div class="acciones-historal dinero-perdidas">· - 150 :    (Compras)
+                    <font class="dinero-total-accion dinero-perdidas">($ 155)</font>
+                    <div class="todas-acciones-historrial-conjuntos">
+                        <div class="acciones-historrial-conjuntos dinero-perdidas"> - 15</div>
+                        <div class="acciones-historrial-conjuntos dinero-perdidas"> - 15</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tiempo-acciones-historial">
+                <div class="text-tiempo-acciones-historial">AYER <font class="dinero-total-accion dinero-total">($ 200)
+                    </font>
+                </div>
+                <div class="acciones-historal dinero-ganancias">· + 150 (+ 15 * 1.2)
+                    <font class="dinero-total-accion dinero-ganancias">($ 155)</font>
+                </div>
+                <div class="acciones-historal dinero-perdidas">· - 150 :    (Boletos)
+                    <font class="dinero-total-accion dinero-perdidas">($ 75)</font>
+                    <div class="todas-acciones-historrial-conjuntos">
+                        <div class="acciones-historrial-conjuntos dinero-perdidas"> - 15</div>
+                        <div class="acciones-historrial-conjuntos dinero-perdidas"> - 15</div>
+                        <div class="acciones-historrial-conjuntos dinero-perdidas"> - 10</div>
+                        <div class="acciones-historrial-conjuntos dinero-perdidas"> - 20</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img draggable="false" class="bt-informacion-tienda" src="./imgs/info.svg" alt="Info" onclick="">
+    </div>
+
+    <div id="numero-ganador">
+        <div id="numero-ganador-1">0</div>
+        <div id="numero-ganador-2">0</div>
+    </div>
+    <div class="div-abrir-cerrar-menu-boletos-abierto" onclick="mostrar_esconder_menu_boletos()">
+        <img draggable="false" id="img-abrir-cerrar-menu-boletos" src="./imgs/flecha_doble.png" alt=">>">
+    </div>
+    <div id="boletos-comprados-div" class="menu-boletos-comprados-abierto"></div>
+
+    <div id="titulo-fin-partida">
+        <img draggable="false" src="./imgs/ganador.png" alt="Sin determinar" class="img-titulo-fin-partida">
+    </div>
+    <input type="button" value="VER GANADOR" id="bt-VerGanador" onclick="animacion_spin()">
+    <input type="button" value="COMPRAR" id="bt-comprar" onclick="comprar_boleto()">
+
+    <div class="alinear-sumar-dinero-div">
+        <div class="sumar-dinero-div">
+            <img draggable="false" src="./imgs/mas.png" alt="" id="bt-sumar-dinero">
+            <div id="dinero-apuesta-text">5</div>
+            <img draggable="false" src="./imgs/menos.png" alt="" id="bt-restar-dinero">
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

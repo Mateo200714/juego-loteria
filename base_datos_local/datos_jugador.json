@@ -1,0 +1,22 @@
+{
+    "dinero_jugador": 250,
+    "dinero_apuesta": 5,
+    "nivel": 1,
+    "experiencia": 0,
+    "historial_bonus_multiplicador": [
+        [
+            {
+                "id": "0-0",
+                "bonus": 0.4,
+                "precio": "0",
+                "caducidad": "3pd"
+            },
+            {
+                "id": "0-1",
+                "bonus": 0.4,
+                "precio": "0",
+                "caducidad": "-1h"
+            }
+        ]
+    ]
+}

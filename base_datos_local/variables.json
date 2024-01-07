@@ -1,0 +1,6 @@
+{
+    "boletos_comprados": [],
+    "ComprarBoleto_permitido": true,
+    "VerGanador_permitido": false,
+    "AbrirTienda_permitido": true
+}
